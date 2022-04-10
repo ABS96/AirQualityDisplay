@@ -35,4 +35,4 @@ Air quality data is collected from the [World Air Quality Index Project](https:/
     3. Repeat step 2 with the yellow LED and pin `D2`
     4. Repeat step 2 with the green LED and pin `D3`
     5. Connect the ground rail to any pin marked `GND`
-9. Verify that the hardware is working correctly (the function `testColors` may be used for debugging the LEDs)
+9. Verify that the hardware is working correctly

@@ -1,14 +1,6 @@
 #pragma once
-
-enum Color
-{
-  red,
-  orange,
-  yellow,
-  green,
-  blue,
-  purple
-};
+#include <Arduino.h>
+#include <color.h>
 
 enum Led
 {
@@ -16,6 +8,13 @@ enum Led
   led_yellow,
   led_green,
   led_blue
+};
+
+const uint8_t pin_led[] = {
+    [led_red] = 5,    // D1
+    [led_yellow] = 4, // D2
+    [led_green] = 0,  // D3
+    [led_blue] = 2,   // LED_BUILTIN
 };
 
 const int max_led_pwm[] = {
@@ -35,4 +34,4 @@ const int color_flag[] = {
     [purple] = 0b1001,
 };
 
-void setLeds(unsigned int pin_blue, unsigned int pin_green, unsigned int pin_yellow, unsigned int pin_red, enum Color color);
+void setLeds(unsigned int pin_blue, unsigned int pin_green, unsigned int pin_yellow, unsigned int pin_red, Color color);
